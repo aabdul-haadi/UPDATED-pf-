@@ -29,7 +29,7 @@ const skillCategories = [
     icon: '📝',
     skills: [
       { name: 'WordPress', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg' },
-      { name: 'Blogger', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blogger/blogger-original.svg' }
+      // { name: 'Blogger', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blogger/blogger-original.svg' }
     ]
   }
 ];
