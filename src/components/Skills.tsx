@@ -9,7 +9,7 @@ const skillCategories = [
     skills: [
       { name: 'HTML', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
       { name: 'CSS', level: 85, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-      { name: 'TailwindCSS', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg' },
+      { name: 'TailwindCSS', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
       { name: 'Bootstrap', level: 85, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
       { name: 'JavaScript', level: 85, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
       { name: 'React', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -28,7 +28,7 @@ const skillCategories = [
     title: 'CMS',
     icon: '📝',
     skills: [
-      { name: 'WordPress', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
+      { name: 'WordPress', level: 90, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg' },
       { name: 'Blogger', level: 80, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blogger/blogger-original.svg' }
     ]
   }
@@ -91,7 +91,7 @@ const Skills: React.FC = () => {
               <motion.div
                 key={categoryIndex}
                 variants={itemVariants}
-                className="bg-dark-100 p-6 rounded-2xl shadow-lg shadow-dark-300/50 backdrop-blur-sm border border-gray-800"
+                className="bg-dark-100/50 p-6 rounded-2xl shadow-lg shadow-dark-300/50 backdrop-blur-sm border border-gray-800 hover:border-primary/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-2xl">{category.icon}</span>
@@ -101,7 +101,12 @@ const Skills: React.FC = () => {
                 </div>
                 <div className="space-y-6">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
+                    <motion.div 
+                      key={skillIndex}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                      transition={{ duration: 0.5, delay: 0.2 * skillIndex }}
+                    >
                       <div className="flex items-center gap-3 mb-2">
                         <img 
                           src={skill.icon} 
@@ -115,15 +120,15 @@ const Skills: React.FC = () => {
                           {skill.level}%
                         </span>
                       </div>
-                      <div className="w-full bg-dark-200 rounded-full h-2">
+                      <div className="w-full bg-dark-200 rounded-full h-2 overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
                           transition={{ duration: 1, delay: 0.4 + (categoryIndex * 0.1) + (skillIndex * 0.1) }}
-                          className="h-2 rounded-full bg-gradient-to-r from-primary to-accent"
+                          className="h-2 rounded-full bg-gradient-to-r from-primary via-accent to-primary"
                         ></motion.div>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
@@ -144,7 +149,8 @@ const Skills: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.4, delay: 0.6 + (index * 0.1) }}
-                  className="px-4 py-2 bg-dark-100 text-gray-300 rounded-full border border-gray-800 hover:border-primary hover:text-primary transition-colors duration-300"
+                  whileHover={{ scale: 1.05, color: '#6366F1' }}
+                  className="px-4 py-2 bg-dark-100/50 text-gray-300 rounded-full border border-gray-800 hover:border-primary/50 transition-colors duration-300"
                 >
                   {skill}
                 </motion.span>

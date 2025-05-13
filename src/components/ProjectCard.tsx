@@ -90,15 +90,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             </a>
           )}
           
-          <a
-            href={project.githubLink || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white transition-colors group"
-          >
-            <Github size={16} className="mr-1 transform group-hover:scale-110 transition-transform duration-300" />
-            View Code
-          </a>
+          {['MILAP', 'Reveal', 'Sindh Police - Tenant System'].includes(project.title) && project.githubLink && (
+  <a
+    href={project.githubLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white transition-colors group"
+  >
+    <Github size={16} className="mr-1 transform group-hover:scale-110 transition-transform duration-300" />
+    View Code
+  </a>
+)}
+
         </div>
       </div>
     </motion.div>

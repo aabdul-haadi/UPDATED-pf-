@@ -17,14 +17,17 @@ export const projects: Project[] = [
     description: "An interactive web platform to reveal project details.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     image: "https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    category: "professional"
+    category: "professional",
+    githubLink: "https://github.com/shabbirfast/reveal"
+
   },
   {
     title: "Sindh Police - Tenant System",
     description: "A system to manage tenant and property information for Sindh Police.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     image: "https://images.pexels.com/photos/2882552/pexels-photo-2882552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    category: "professional"
+    category: "professional",
+      githubLink: "https://github.com/aabdul-haadi/Sindh-Police---Tenant-System"
   },
   {
     title: "MILAP",
@@ -32,7 +35,7 @@ export const projects: Project[] = [
     technologies: ["React", "TailwindCSS", "Firebase"],
     image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     category: "professional",
-    githubLink: "#"
+    githubLink: "https://github.com/aabdul-haadi/MILAP_u"
   },
   
   // Personal Projects
