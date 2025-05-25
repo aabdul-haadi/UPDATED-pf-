@@ -26,7 +26,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark-300/90 z-10"></div>
       
-      <div className="relative h-48 overflow-hidden">
+      {/* Increased the height of the image area */}
+      <div className="relative h-68 overflow-hidden"> 
         <img
           src={project.image}
           alt={project.title}
@@ -91,17 +92,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           )}
           
           {['MILAP', 'Reveal', 'Sindh Police - Tenant System'].includes(project.title) && project.githubLink && (
-  <a
-    href={project.githubLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white transition-colors group"
-  >
-    <Github size={16} className="mr-1 transform group-hover:scale-110 transition-transform duration-300" />
-    View Code
-  </a>
-)}
-
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white transition-colors group"
+            >
+              <Github size={16} className="mr-1 transform group-hover:scale-110 transition-transform duration-300" />
+              View Code
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
