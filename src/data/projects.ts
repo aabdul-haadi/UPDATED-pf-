@@ -65,7 +65,7 @@ export const projects: Project[] = [
   },
   {
     title: "Digital Clock",
-    description: "A sleek, functional digital clock application.",
+    description: "A sleek, minimalist digital clock app displaying time clearly with simple functionality and an intuitive design..",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "https://images.pexels.com/photos/707676/pexels-photo-707676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     category: "personal",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   },
   {
     title: "Wheel Project",
-    description: "An interactive spinning wheel game.",
+    description: "An interactive spinning wheel game that offers a sign from Allah with each spin.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "https://images.pexels.com/photos/144429/pexels-photo-144429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     category: "personal",
