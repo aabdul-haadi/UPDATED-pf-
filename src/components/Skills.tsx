@@ -21,7 +21,7 @@ const skillCategories = [
     skills: [
       { name: 'PHP', level: 75, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
       { name: 'SQL', level: 70, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-      { name: 'Node.js', level: 65, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' }
+      { name: 'Node.js', level: 35, icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' }
     ]
   },
   {
