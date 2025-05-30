@@ -143,7 +143,7 @@ const Skills: React.FC = () => {
               Additional Skills & Tools
             </h4>
             <div className="flex flex-wrap justify-center gap-4">
-              {['Git', 'Figma', 'Adobe XD', 'Responsive Design', 'SEO', 'UI/UX Design', 'Firebase', 'RESTful APIs'].map((skill, index) => (
+              {['Git', 'Responsive Design', 'UI/UX Design', 'Firebase', 'Digital Marketing'].map((skill, index) => (
                 <motion.span
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
